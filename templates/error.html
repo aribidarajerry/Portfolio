@@ -1,2 +1,8 @@
 {% extends 'base.html' %}
-{% block landing %}<h1 class="hero">{{ error }}</h1>{% endblock %}
+{% block content %}{{ error }}... Redirecting to <a href="http://127.0.0.1:5000/">Home page</a> in 5 seconds.
+<script>
+    let timeout = setTimeout(() =>
+        window.open('http://127.0.0.1:5000/'), 5000
+    );
+</script>
+{% endblock %}

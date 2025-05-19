@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block _style %}
+#portfolio {
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+.portfolio-category {
+  margin-bottom: 30px;
+}
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.portfolio-item {
+  flex: 1 1 300px;
+  background: white;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.portfolio-item video,
+.portfolio-item audio,
+.portfolio-item img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+.portfolio-item p {
+  margin-top: 10px;
+}
+{% endblock %}
+
+{% block title %}Aribidara Jerry | Musician & Web Developer{% endblock %}
+
+{% block content %}
+
+
+<section id="portfolio">
+  <h2>My Portfolio</h2>
+
+  <div class="portfolio-category">
+    <h3>🎵 Music & Composition</h3>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <video controls src="videos/performance1.mp4"></video>
+        <p>Live Violin Performance - City Concert Hall</p>
+      </div>
+      <div class="portfolio-item">
+        <audio controls src="audios/composition1.mp3"></audio>
+        <p>Original Composition: "Dreamscape in G"</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/sheet1.png" alt="Sheet Music Sample">
+        <p>Staff Notation Sample - Harmony Study</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-category">
+    <h3>💻 Web Development</h3>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="images/project1.png" alt="Music School">
+        <p><a href="https://masm.onrender.com" target="_blank">MASM - Maestro Aribidara School of Music</a></p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/project2.png" alt="Calculator">
+        <p><a href="https://flask-web-app.onrender.com" target="_blank">Student Registration App</a></p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/project2.png" alt="Flask App">
+        <p><a href="https://flask-web-app.onrender.com" target="_blank">Student Registration App</a></p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/project2.png" alt="Flask App">
+        <p><a href="https://flask-web-app.onrender.com" target="_blank">Student Registration App</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-category">
+    <h3>🎓 Teaching</h3>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="images/lesson1.png" alt="Teaching Screenshot">
+        <p>Interactive Online Music Lesson – Beginner Violin</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/testimonial.png" alt="Student Review">
+        <p>Testimonial from Jane Doe: “Great teacher!”</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

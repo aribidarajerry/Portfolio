@@ -5,58 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>{% block _style %}{% endblock %}</style>
   <script src="{{ url_for('static', filename='js/webquery.js') }}"></script>
   <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-  <title>{% block title %}{% endblock %}Home</title>
+  <title>{% block title %}{% endblock %}</title>
 </head>
 <body class="container-fluid">
-  <div class="header">
-    <header>
-      Online Music Academy
-    </header>
-    <nav class="navbar">
-      <a href="#"><span>About</span></a>
-      <a href="#"><span>Services</span></a>
-      <a href="#"><span>Contact</span></a>
-    </nav>
-    <div class="form">
-      <form class="form-control" action="#" method="get">
-        <input placeholder="Search Academy"  type="search" name="" id="">
-      </form>
-      <a href="/login">
-        <span>Login</span>
-      </a>
-      <a href="/signup">
-        <span>SignUp</span>
-      </a>
-    </div>
-  </div>
-  <div class="landing">{% block landing %}{% endblock %}</div>
+  {% block header %}{% endblock %}
   <!--   - Welcome message: "Learn Music. Play Better. Compose Freely."  
   - CTA button: “Start Learning Now” / “Join a Free Class”
  -->
-
-  <div class="carousel">
-  <img src="{{ url_for('static', filename='image/jerry6.jpg') }}" alt="">
-      <img src="{{ url_for('static', filename='image/jerry7.jpg') }}" alt="">
-      <img src="{{ url_for('static', filename='image/jerry9.jpg') }}" alt="">
-      <img src="{{ url_for('static', filename='image/jerry10.jpg') }}" alt="">
-  <button class="carousel-prev">Previous</button>
-  <button class="carousel-next">Next</button>
-</div>
-
-  <div class="slider">
-    <div class="slides">
-      <img src="{{ url_for('static', filename='image/jerry6.jpg') }}" alt="">
-      <img src="{{ url_for('static', filename='image/jerry7.jpg') }}" alt="">
-      <img src="{{ url_for('static', filename='image/jerry9.jpg') }}" alt="">
-      <img src="{{ url_for('static', filename='image/jerry10.jpg') }}" alt="">
-    </div>
-    <div class="arrows">
-      <span class="prev">&lt;</span>
-      <span class="next">&gt;</span>
-    </div>
-
+  {% block content %}{% endblock %}
   </div>
 </body>
