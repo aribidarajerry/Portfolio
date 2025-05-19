@@ -18,7 +18,7 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index3.html')
 
 @app.route('/2')
 def template_2():
