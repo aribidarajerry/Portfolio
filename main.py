@@ -18,19 +18,11 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 @app.route('/')
 def index():
-    return render_template('index3.html')
+    return render_template('index.html')
 
 @app.route('/2')
 def template_2():
     return render_template('index2.html')
-
-@app.route('/3')
-def template_3():
-    return render_template('index3.html')
-
-@app.route('/register')
-def register():
-    return render_template('register.html')
 
 @app.errorhandler(404)
 def page_not_found(e):

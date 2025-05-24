@@ -1,204 +1,116 @@
 {% extends 'base.html' %}
-{% block header %}{% endblock %}
 {% block _style %}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+#portfolio {
+  padding: 40px;
+  background-color: #f9f9f9;
 }
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
-  line-height: 1.6;
+.portfolio-category {
+  margin-bottom: 30px;
 }
-
-header {
-  background-color: #111;
-  padding: 20px 0;
-}
-
-nav ul {
+.portfolio-grid {
   display: flex;
-  justify-content: center;
-  list-style: none;
   flex-wrap: wrap;
+  gap: 20px;
 }
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #f39c12;
-}
-
-section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-section h2 {
-  color: #222;
-  margin-bottom: 15px;
-}
-
-#home {
-  text-align: center;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: white;
-  padding: 100px 20px;
-}
-
-#home h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-#home p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-#home a {
-  background-color: #f39c12;
-  color: #fff;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-#home a:hover {
-  background-color: #e67e22;
-}
-
-form {
+.portfolio-item {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-}
-
-form input,
-form textarea {
-  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 300px;
+  background: white;
+  padding: 15px;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
+  border-radius: 8px;
 }
-
-form button {
-  padding: 12px;
-  background-color: #111;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.portfolio-item video,
+.portfolio-item audio,
+.portfolio-item img {
+  width: 100%;
+  max-width: 300px;
+  height: 250px;
+  border-radius: 6px;
 }
-
-form button:hover {
-  background-color: #333;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #111;
-  color: white;
-  font-size: 0.9rem;
-  margin-top: 40px;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  #home h1 {
-    font-size: 2rem;
-  }
-
-  section {
-    padding: 40px 15px;
-  }
+.portfolio-item p {
+  margin-top: 10px;
 }
 
 {% endblock %}
+
 {% block title %}Aribidara Jerry | Musician & Web Developer{% endblock %}
+
 {% block content %}
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#music">Music</a></li>
-        <li><a href="#teaching">Teaching</a></li>
-        <li><a href="#videos">Videos</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section id="home">
-    <h1>Hello, I'm Aribidara Jerry</h1>
-    <p>Musician • Composer • Educator • Web Developer</p>
-    <a href="#music">Explore My Work</a>
-  </section>
+<section class="container-fluid" id="portfolio">
+  <h2>My Portfolio</h2>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Brief biography and musical journey.</p>
-  </section>
+  <div class="portfolio-category">
+    <h3>🎵 Music & Composition</h3>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <video controls src="videos/performance1.mp4"></video>
+        <p>Live Violin Performance - City Concert Hall</p>
+      </div>
+      <div class="portfolio-item">
+        <audio controls src="audios/composition1.mp3"></audio>
+        <p>Original Composition: "Dreamscape in G"</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/sheet1.png" alt="Sheet Music Sample">
+        <p>Staff Notation Sample - Harmony Study</p>
+      </div>
+    </div>
+  </div>
 
-  <section id="music">
-    <h2>My Music</h2>
-    <p>Audio, scores, and performance links.</p>
-  </section>
+  <div class="portfolio-category">
+    <h3>💻 Web Development</h3>
+    <div class="row portfolio-grid">
+      <div class="col-sm-4 portfolio-item">
+        <img src="{{ url_for('static', filename='image/masm.png') }}" alt="MASM">
+        <p><a class="link" href="https://masm.onrender.com" target="_blank">MASM - Maestro Aribidara School of Music</a></p>
+      </div>
+      <div class="col-sm-4 portfolio-item">
+        <img src="{{ url_for('static', filename='image/calculator.jpg') }}" alt="Calculator">
+        <p><a href="https://eclecticsite.vercel.app/calculator.html" target="_blank">Calculator</a></p>
+      </div>
+      <div class="col-sm-4 portfolio-item">
+        <img src="{{ url_for('static', filename='image/princess.jpg') }}" alt="Princess Samiat's Biography">
+        <p><a href="https://eclecticsite.vercel.app/princess.html" target="_blank">Princess Samiat's Biography</a></p>
+      </div>
+      <div class="col-sm-4 portfolio-item">
+        <img src="{{ url_for('static', filename='image/computer.jpg') }}" alt="Data-system">
+        <p><a href="https://data-system.vercel.app/" target="_blank">Small data system using jQuery</a></p>
+      </div>
+    </div>
+  </div>
 
-  <section id="teaching">
-    <h2>Teaching</h2>
-    <p>Book a lesson, class details, teaching philosophy.</p>
-  </section>
+  <div class="portfolio-category">
+    <h3>🎓 Teaching</h3>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="images/lesson1.png" alt="Teaching Screenshot">
+        <p>Interactive Online Music Lesson – Beginner Violin</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/testimonial.png" alt="Student Review">
+        <p>Testimonial from Jane Doe: “Great teacher!”</p>
+      </div>
+    </div>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+      Action
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a href="" class="dropdown-item">Action</a>
+      <a href="" class="dropdown-item">Another action</a>
+      <a href="" class="dropdown-item">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a href="" class="dropdown-item">Seperated link</a>
+    </div>
+  </div>
+</section>
 
-  <section id="videos">
-    <h2>Videos</h2>
-    <p>YouTube and Instagram embeds.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Name">
-      <input type="email" placeholder="Email">
-      <textarea placeholder="Message"></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Aribidara Jerry</p>
-  </footer>
-
-</body>
-</html>
 
 {% endblock %}

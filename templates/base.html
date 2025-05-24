@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  <style>{% block _style %}{% endblock %}</style>
-  <script src="{{ url_for('static', filename='js/webquery.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <meta property="og:image" content="https://aribidarajerry.onrender.com/static/image/jerry.jpg" />
   <title>{% block title %}{% endblock %}</title>
+  <link rel="shortcut icon" type="image/jpg" href="{{ url_for('static', filename='image/jerry.jpg') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <style>{% block _style %}{% endblock %}</style>
+  <script src="{{ url_for('static', filename='js/webquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
 </head>
 <body class="container-fluid">
   {% block header %}{% endblock %}
@@ -17,5 +18,9 @@
   - CTA button: “Start Learning Now” / “Join a Free Class”
  -->
   {% block content %}{% endblock %}
-  </div>
+  <footer>
+      <p>&copy; 2025 Aribidara Jerry</p>
+  </footer>
+
 </body>
+</html>
