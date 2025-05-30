@@ -2,7 +2,7 @@
 Flask==3.0.2
 
 # Web Server Gateway Interface
-gunicorn==21.2.0  # For production WSGI HTTP server
+gunicorn==23.0.0  # For production WSGI HTTP server
 
 # Forms and Validation
 Flask-WTF==1.2.1
