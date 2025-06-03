@@ -176,6 +176,13 @@ section h2 {
 .music .row {
   border: 1px solid #0f2027;
   border-radius: 10px;
+  transition: .2s ease-in-out;
+}
+
+.music .row:hover {
+  border: none;
+  box-shadow: 0 0 10px #0f2027;
+  transform: translateY(-10px);
 }
 
 a {
