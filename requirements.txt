@@ -29,7 +29,7 @@ python-dotenv==1.0.1
 Flask-RESTful==0.3.10
 
 # CORS handling (for APIs)
-Flask-Cors==4.0.0
+Flask-Cors==6.0.0
 
 # Testing (optional)
 pytest==8.2.0
