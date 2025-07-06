@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% block _style %}
+#portfolio {
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+.portfolio-category {
+  margin-bottom: 30px;
+}
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 300px;
+  background: white;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.portfolio-item video,
+.portfolio-item audio,
+.portfolio-item img {
+  width: 100%;
+  max-width: 300px;
+  height: 250px;
+  border-radius: 6px;
+}
+.portfolio-item p {
+  margin-top: 10px;
+}
+
+{% endblock %}
+
+{% block title %}Aribidara Jerry | Musician & Web Developer{% endblock %}
+
+{% block content %}
+
+
+<section class="container-fluid" id="portfolio">
+  <h2>My Portfolio</h2>
+
+  <div class="portfolio-category">
+    <h3>🎵 Music & Composition</h3>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <video controls src="videos/performance1.mp4"></video>
+        <p>Live Violin Performance - City Concert Hall</p>
+      </div>
+      <div class="portfolio-item">
+        <audio controls src="audios/composition1.mp3"></audio>
+        <p>Original Composition: "Dreamscape in G"</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/sheet1.png" alt="Sheet Music Sample">
+        <p>Staff Notation Sample - Harmony Study</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-category">
+    <h3>💻 Web Development</h3>
+    <div class="row portfolio-grid">
+      <div class="col-sm-4 portfolio-item">
+        <img src="{{ url_for('static', filename='image/masm.png') }}" alt="MASM">
+        <p><a class="link" href="https://masm.onrender.com" target="_blank">MASM - Maestro Aribidara School of Music</a></p>
+      </div>
+      <div class="col-sm-4 portfolio-item">
+        <img src="{{ url_for('static', filename='image/calculator.jpg') }}" alt="Calculator">
+        <p><a href="https://eclecticsite.vercel.app/calculator.html" target="_blank">Calculator</a></p>
+      </div>
+      <div class="col-sm-4 portfolio-item">
+        <img src="{{ url_for('static', filename='image/princess.jpg') }}" alt="Princess Samiat's Biography">
+        <p><a href="https://eclecticsite.vercel.app/princess.html" target="_blank">Princess Samiat's Biography</a></p>
+      </div>
+      <div class="col-sm-4 portfolio-item">
+        <img src="{{ url_for('static', filename='image/computer.jpg') }}" alt="Data-system">
+        <p><a href="https://data-system.vercel.app/" target="_blank">Small data system using jQuery</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-category">
+    <h3>🎓 Teaching</h3>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="images/lesson1.png" alt="Teaching Screenshot">
+        <p>Interactive Online Music Lesson – Beginner Violin</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/testimonial.png" alt="Student Review">
+        <p>Testimonial from Jane Doe: “Great teacher!”</p>
+      </div>
+    </div>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+      Action
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a href="" class="dropdown-item">Action</a>
+      <a href="" class="dropdown-item">Another action</a>
+      <a href="" class="dropdown-item">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a href="" class="dropdown-item">Seperated link</a>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

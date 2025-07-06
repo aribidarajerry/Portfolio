@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="https://aribidarajerry.onrender.com/static/image/jerry.jpg" />
+  <meta name="description" content="Hello! I'm Aribidara Jerry, a multifaceted individual with a passion for teaching, music, and technology.">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="shortcut icon" type="image/jpg" href="{{ url_for('static', filename='image/jerry.jpg') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>{% block _style %}{% endblock %}</style>
+  <script src="{{ url_for('static', filename='js/webquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script>
+    // For editing purposes only
+    // setTimeout(function() {
+    //     location.reload()
+    // }, 3000);
+  </script>
+</head>
+<body class="container-fluid">
+  {% block header %}{% endblock %}
+  <!--   - Welcome message: "Learn Music. Play Better. Compose Freely."  
+  - CTA button: “Start Learning Now” / “Join a Free Class”
+ -->
+  {% block content %}{% endblock %}
+
+  <footer>
+      <p>&copy; 2025 Aribidara Jerry</p>
+  </footer>
+
+</body>
+</html>

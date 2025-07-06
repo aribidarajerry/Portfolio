@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}{{ error }}... Redirecting to <a href="https://aribidarajerry.onrender.com/">Home page</a> in 5 seconds.
+<script>
+    setTimeout(function() {
+        window.location.href = 'https://aribidarajerry.onrender.com/'
+    }, 5000
+    );
+</script>
+{% endblock %}
