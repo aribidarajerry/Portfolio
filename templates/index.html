@@ -6,12 +6,12 @@
 <header class="sticky-sm-top">
   <nav>
     <ul>
-      <li><a href="https://aribidarajerry.onrender.com/#">Home</a></li>
-      <li><a href="https://aribidarajerry.onrender.com/#about">About</a></li>
-      <li><a href="https://aribidarajerry.onrender.com/#music">Music</a></li>
+      <li><a href="http://127.0.0.1:5000/#">Home</a></li>
+      <li><a href="http://127.0.0.1:5000/#about">About</a></li>
+      <li><a href="http://127.0.0.1:5000/#music">Music</a></li>
       <!-- <li><a href="#teaching">Teaching</a></li> -->
-      <li><a href="https://aribidarajerry.onrender.com/#videos">Videos</a></li>
-      <li><a href="https://aribidarajerry.onrender.com/#contact">Contact</a></li>
+      <li><a href="http://127.0.0.1:5000/#videos">Videos</a></li>
+      <li><a href="http://127.0.0.1:5000/#contact">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -75,6 +75,22 @@
     
     -->
     <div class="row">
+      <!-- <div class="col-sm-6 music">
+        <div class="row">
+          <img class="col-sm-6" src="{{ url_for('static', filename='image/stay-with-him.jpg') }}" alt="">
+          <div class="col-sm-6 music-links">
+            <a href="">
+              <i class="fa-solid fa-external-link"></i> Pdf Score
+            </a>
+            <a href="">
+              <i class="fa-brands fa-youtube"></i> YouTube
+            </a>
+            <a href="https://audio.com/aribidara-jerry/audio/stay-with-him">
+              <i class="fa-solid fa-music"></i> Audio
+            </a>
+          </div>
+        </div>
+      </div> -->
       <div class="col-sm-6 music">
         <div class="row">
           <img class="col-sm-6" src="{{ url_for('static', filename='image/musical-moment-2.jpg') }}" alt="">
@@ -264,6 +280,7 @@
     <h2>Videos</h2>
     <p>Welcome to my video showcase! Here, you'll find a selection of my performances, highlighting my skills as an instrumentalist. From classical masterpieces to contemporary works, I'm excited to share my musical interpretations with you. Explore the videos below to experience my passion for music.</p>
     <div class="row">
+      <iframe class="col-sm-6" src="https://www.youtube.com/embed/vFKYl2WNswM?si=KZF_EbSSJyPoJfgU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen><!-- Dies Irae - Mozart's Requiem in D minor K 626 --></iframe>
       <iframe class="col-sm-6" src="https://www.youtube.com/embed/VvHzfi7VVxs?si=5VpFsIjDlHroHBMu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen><!-- Come Holy Spirit --></iframe>
       <iframe class="col-sm-6" src="https://www.youtube.com/embed/kIAN88EnzRU?si=t-Wm3VR3Gc1aNqrg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen><!-- Violin worship session 1 --></iframe>
       <iframe class="col-sm-6" src="https://www.youtube.com/embed/2XQ-uHfG0HA?si=65-td0zfz-aPKbTV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen><!-- Bass and Lead guitarist all in one --></iframe>
@@ -274,7 +291,7 @@
     You can visit my YouTube channel for additional performances and music content by clicking <a href="https://www.youtube.com/@aribidarajerry">Aribidara Jerry</a>.
   </section>
 
-  <section id="contact">
+  <!-- <section id="contact">
     <h2>Contact Me</h2>
     <form>
       <input type="text" placeholder="Name">
@@ -282,7 +299,8 @@
       <textarea placeholder="Message"></textarea>
       <button type="submit">Send</button>
     </form>
-  </section>
+  </section> -->
+
   <a class="arrow" href="#">
     <i class="fa-solid fa-arrow-up"></i>
   </a>
