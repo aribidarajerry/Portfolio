@@ -6,12 +6,13 @@
 <header class="sticky-sm-top">
   <nav>
     <ul>
-      <li><a href="http://127.0.0.1:5000/#">Home</a></li>
-      <li><a href="http://127.0.0.1:5000/#about">About</a></li>
-      <li><a href="http://127.0.0.1:5000/#music">Music</a></li>
+      <li><a href="http://aribidarajerry.onrender.com/#">Home</a></li>
+      <li><a href="http://aribidarajerry.onrender.com/#about">About</a></li>
+      <li><a href="http://aribidarajerry.onrender.com/#music">Music</a></li>
       <!-- <li><a href="#teaching">Teaching</a></li> -->
-      <li><a href="http://127.0.0.1:5000/#videos">Videos</a></li>
-      <li><a href="http://127.0.0.1:5000/#contact">Contact</a></li>
+      <li><a href="http://aribidarajerry.onrender.com/#videos">Videos</a></li>
+      <li><a href="http://aribidarajerry.onrender.com/#gallery">Gallery</a></li>
+      <!-- <li><a href="http://aribidarajerry.onrender.com/#contact">Contact</a></li> -->
     </ul>
   </nav>
 </header>
@@ -19,7 +20,7 @@
 <section id="home">
   <h1>Hello, I'm Aribidara Jerry</h1>
   <p>Musician • Composer • Educator • Web Developer</p>
-  <a href="#music">Explore My Work</a>
+  <a href="#music">Explore My Works <i class="fa-solid fa-arrow-down"></i></a>
 </section>
 
 <div class="scroll">
@@ -27,7 +28,7 @@
     <h2>About Me</h2>
     <div class="about">
       <div class="img">
-        <img src="{{ url_for('static', filename='image/jerry.jpg') }}" alt="">
+        <img src="{{ url_for('static', filename='image/bg3.jpg') }}" alt="">
         <div class="social-links">
           <a href="https://facebook.com/aribidarajerry">
             <i class="fa-brands fa-facebook"></i>
@@ -48,13 +49,13 @@
             <i class="fa-brands fa-github"></i>
           </a>
       </div>
-      <p>Hello! I'm Aribidara Jerry, a multifaceted individual with a passion for teaching, music, and technology. As a certified teacher, I've had the privilege of inspiring and educating students in various settings. My love for music led me to become an instrumentalist, and I've had the honor of being certified by renowned institutions such as <a href="https://muson.org/" target="_blank">The Musical Society Of Nigeria (MUSON)</a> and <a href="https://www.abrsm.org/en-ng" target="_blank">The Associated Board of Royal Schools of Music (ABRSM)</a>.<br /><br />In addition to my teaching and musical pursuits, I'm also a web developer with a keen interest in building innovative and user-friendly digital experiences. This site was solely developed by me. I'm always looking for ways to combine my skills to create something truly unique and impactful.</p>
+      <p class="content">Hello! I'm Aribidara Jerry, a multifaceted individual with a passion for teaching, music, and technology. As a certified teacher, I've had the privilege of inspiring and educating students in various settings. My love for music led me to become an instrumentalist, and I've had the honor of being certified by renowned institutions such as <a href="https://muson.org/" target="_blank">The Musical Society Of Nigeria (MUSON)</a> and <a href="https://www.abrsm.org/en-ng" target="_blank">The Associated Board of Royal Schools of Music (ABRSM)</a>.<br /><br />In addition to my teaching and musical pursuits, I'm also a web developer with a keen interest in building innovative and user-friendly digital experiences. This site was solely developed by me. I'm always looking for ways to combine my skills to create something truly unique and impactful.</p>
     </div>
   </section>
 
   <section id="music">
     <h2>My Music</h2>
-    <p>Discover my musical creations, featuring a collection of videos and original compositions. Explore the intersection of sound and vision, and experience the depth of my artistic expression.</p>
+    <p class="content">Discover my musical creations, featuring a collection of videos and original compositions. Explore the intersection of sound and vision, and experience the depth of my artistic expression.</p>
     <!-- 
     Waltz in E minor - https://www.sheetmusicdirect.com/en-US/se/ID_No/1678453/Product.aspx
 
@@ -268,17 +269,19 @@
         </div>
       </div> -->
     </div>
-    You will find more of my documented composition on <a href="https://www.sheetmusicdirect.com/en-US/Search.aspx?query=Aribidara%2BJerry">SHEETMUSICDIRECT</a>. Please note that I have previously published works under the name A.T.M.F. Jerry. Moving forward, all works will be attributed to <b>Aribidara Jerry</b> for consistency. Both names refer to the same creator.
+    <p class="content">
+      You will find more of my documented composition on <a href="https://www.sheetmusicdirect.com/en-US/Search.aspx?query=Aribidara%2BJerry">SHEETMUSICDIRECT</a>. Please note that I have previously published works under the name A.T.M.F. Jerry. Moving forward, all works will be attributed to <b>Aribidara Jerry</b> for consistency. Both names refer to the same creator.
+    </p>
   </section>
 
   <!-- <section id="teaching">
     <h2>Teaching</h2>
-    <p>Book a lesson, class details, teaching philosophy.</p>
+    <p class="content">Book a lesson, class details, teaching philosophy.</p>
   </section> -->
 
   <section id="videos">
     <h2>Videos</h2>
-    <p>Welcome to my video showcase! Here, you'll find a selection of my performances, highlighting my skills as an instrumentalist. From classical masterpieces to contemporary works, I'm excited to share my musical interpretations with you. Explore the videos below to experience my passion for music.</p>
+    <p class="content">Welcome to my video showcase! Here, you'll find a selection of my performances, highlighting my skills as an instrumentalist. From classical masterpieces to contemporary works, I'm excited to share my musical interpretations with you. Explore the videos below to experience my passion for music.</p>
     <div class="row">
       <iframe class="col-sm-6" src="https://www.youtube.com/embed/vFKYl2WNswM?si=KZF_EbSSJyPoJfgU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen><!-- Dies Irae - Mozart's Requiem in D minor K 626 --></iframe>
       <iframe class="col-sm-6" src="https://www.youtube.com/embed/VvHzfi7VVxs?si=5VpFsIjDlHroHBMu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen><!-- Come Holy Spirit --></iframe>
@@ -288,7 +291,23 @@
       <iframe class="col-sm-6" src="https://www.youtube.com/embed/pzhfY4gzaNw?si=kegQTcyNfhzeql64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen><!--Sunday ministration--></iframe>
       <iframe class="col-sm-6" src="https://youtube.com/embed/VN8rN0hLrZM?playlist=VN8rN0hLrZM&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen><!--Bach prelude in c minor--></iframe>
     </div>
-    You can visit my YouTube channel for additional performances and music content by clicking <a href="https://www.youtube.com/@aribidarajerry">Aribidara Jerry</a>.
+    <p class="content">
+      You can visit my YouTube channel for additional performances and music content by clicking <a href="https://www.youtube.com/@aribidarajerry">Aribidara Jerry</a>.
+    </p>
+  </section>
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <p class="content"></p>
+    <div class="row gal-images">
+      <img src="{{ url_for('static', filename='image/bg1.jpg') }}" alt="" class="col-sm-4">
+      <img src="{{ url_for('static', filename='image/bg2.jpg') }}" alt="" class="col-sm-4">
+      <img src="{{ url_for('static', filename='image/bg3.jpg') }}" alt="" class="col-sm-4">
+      <img src="{{ url_for('static', filename='image/bg5.jpg') }}" alt="" class="col-sm-4">
+      <img src="{{ url_for('static', filename='image/bg6.jpg') }}" alt="" class="col-sm-4">
+      <img src="{{ url_for('static', filename='image/bg7.jpg') }}" alt="" class="col-sm-4">
+      <img src="{{ url_for('static', filename='image/bg8.jpg') }}" alt="" class="col-sm-4">
+      <img src="{{ url_for('static', filename='image/bg9.jpg') }}" alt="" class="col-sm-4">
+    </div>
   </section>
 
   <!-- <section id="contact">

@@ -3,13 +3,14 @@
   padding: 0;
   box-sizing: border-box;
   scroll-padding-top: 5rem;
+  font-weight: bold;
 }
 
 html {
   min-width: 300px;
 }
 
-@keyframes change-background {
+/* @keyframes change-background {
   0% {
     background-image: url("../image/bg1.jpg");
   }
@@ -43,16 +44,16 @@ html {
   100% {
     background-image: url("../image/bg1.jpg");
   }
-}
+} */
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  animation: change-background 60s infinite alternate ease-in-out;
+  /* animation: change-background 60s infinite alternate; */
+  background: url("../image/bg1.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  color: #333;
   line-height: 1.6;
 }
 
@@ -87,12 +88,11 @@ section {
   padding: 60px 20px;
   max-width: 900px;
   margin: auto;
-  /* background-color: #f8f9fa; */
+  margin-top: 3rem;
   background-color: rgb(255,255,255,85%);
 }
 
 section h2 {
-  color: #222;
   margin-bottom: 15px;
 }
 
@@ -127,6 +127,10 @@ section h2 {
   background-color: #e67e22;
 }
 
+.content {
+  color: #5e5e5e;
+}
+
 .about {
   position: relative;
 }
@@ -156,7 +160,8 @@ section h2 {
 }
 
 .social-links i:hover {
-  transform: scale(1.2)
+  transform: scale(1.2);
+  box-shadow: 0 0 20px white;
 }
 
 .img:hover .social-links {
@@ -209,6 +214,7 @@ section h2 {
 }
 
 .music .row {
+  color: #222;
   border: 1px solid #0f2027;
   border-radius: 10px;
   transition: .2s ease-in-out;
@@ -232,16 +238,17 @@ a {
   align-items: center;
   margin: 0.5rem 0;
   padding: 0.5rem 0;
-  color: white;
+  color: #222;
   border: 1px solid #0f2027;
 }
 
 .music-links a:hover {
+  color: white;
   box-shadow: 0 0 10px #0f2027;
   background: linear-gradient(to right, #0a151a, #1a2e37, #243f50);
 }
 
-.music-links a:nth-child(1) {
+/* .music-links a:nth-child(1) {
   color: #f39c12;
 }
 
@@ -251,11 +258,21 @@ a {
 
 .music-links a:nth-child(3) {
   color: purple;
-}
+} */
 
 iframe {
   height: 35vh;
   padding: 0 0.5rem 0.5rem 0;
+}
+
+.gal-images {
+  flex-direction: column;
+  overflow: scroll;
+  height: 200px;
+}
+
+.gal-images img {
+  height: 100%;
 }
 
 form {
