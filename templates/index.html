@@ -298,17 +298,21 @@
   <section id="gallery">
     <h2>Gallery</h2>
     <p class="content"></p>
-    <div class="row gal-images">
-      <img src="{{ url_for('static', filename='image/bg1.jpg') }}" alt="" class="col-sm-4">
-      <img src="{{ url_for('static', filename='image/bg2.jpg') }}" alt="" class="col-sm-4">
-      <img src="{{ url_for('static', filename='image/bg3.jpg') }}" alt="" class="col-sm-4">
-      <img src="{{ url_for('static', filename='image/bg5.jpg') }}" alt="" class="col-sm-4">
-      <img src="{{ url_for('static', filename='image/bg6.jpg') }}" alt="" class="col-sm-4">
-      <img src="{{ url_for('static', filename='image/bg7.jpg') }}" alt="" class="col-sm-4">
-      <img src="{{ url_for('static', filename='image/bg8.jpg') }}" alt="" class="col-sm-4">
-      <img src="{{ url_for('static', filename='image/bg9.jpg') }}" alt="" class="col-sm-4">
+    <div class="infinite-slider-wrapper">
+      <div class="infinite-slider-track">
+        <img src="{{ url_for('static', filename='image/bg1.jpg') }}" alt="" class="slider-img">
+          <img src="{{ url_for('static', filename='image/bg2.jpg') }}" alt="" class="slider-img">
+          <img src="{{ url_for('static', filename='image/bg3.jpg') }}" alt="" class="slider-img">
+          <img src="{{ url_for('static', filename='image/bg5.jpg') }}" alt="" class="slider-img">
+          <img src="{{ url_for('static', filename='image/bg6.jpg') }}" alt="" class="slider-img">
+          <img src="{{ url_for('static', filename='image/bg7.jpg') }}" alt="" class="slider-img">
+          <img src="{{ url_for('static', filename='image/bg8.jpg') }}" alt="" class="slider-img">
+          <img src="{{ url_for('static', filename='image/bg9.jpg') }}" alt="" class="slider-img">
+      </div>
     </div>
   </section>
+
+
 
   <!-- <section id="contact">
     <h2>Contact Me</h2>
